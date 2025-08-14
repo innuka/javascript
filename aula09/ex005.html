@@ -10,6 +10,9 @@
             color: white;
             font: normal 18px arial;
         }
+        p{
+            color: red;
+        }
     </style>
 </head>
 <body>
@@ -18,7 +21,9 @@
     <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
     <div>Clique em Min</div>
     <script>
-        var p1 = window.document.getElementsByTagName('p')
+        // window.document.body.style.background = 'black'
+        var p1 = window.document.getElementsByTagName('p')[1]
+        window.document.write("Esta escrito assim : " + p1.innerHTML)
     </script>
 </body>
 </html>
