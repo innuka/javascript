@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        div#area{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            width: 250px;
+            height: 250px;
+            background-color: grey;
+        }
+        p#resultado{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            font-size: 1.5em;
+            width: 250px;
+            height: 50px;
+            background-color: lightblue
+        }
+    </style>
+</head>
+<body>
+    <div id="area" tabindex="0">Tente DESCOBRIR!! <br>Qual tecla esta o SEGREDO!!!</div>
+    <p id="resultado"></p>
+    <script>
+        let area = document.getElementById('area')
+        let resultado = document.getElementById('resultado')
+        document.addEventListener("keydown", tecla)
+
+        function tecla(){
+            if (event.key === "j" || event.key === "J"){
+                resultado.textContent = 'Rabscabscabsca'
+            }
+        }
+    </script>
+</body>
+</html>

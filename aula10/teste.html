@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes com eventos DOM</title>
+    <style>
+        body{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            gap: 10px;
+            justify-items: center;
+        }
+
+        div.teclas{
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: grey;
+        }
+        div#resultado{
+            width: 100px;
+            height: 50px;
+            background-color: rgb(192, 192, 192);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="teclas" id="1">1</div>
+    <div class="teclas" id="2">2</div>
+    <div class="teclas" id="3">3</div>
+    <div class="teclas" id="+">+</div>
+    <div class="teclas" id="4">4</div>
+    <div class="teclas" id="5">5</div>
+    <div class="teclas" id="6">6</div>
+    <div class="teclas" id="-">-</div>
+    <div class="teclas" id="7">7</div>
+    <div class="teclas" id="8">8</div>
+    <div class="teclas" id="9">9</div>
+    <div class="teclas" id="=">=</div>
+    <div class="teclas" id="0">0</div>
+    <div id="resultado"></div>
+    <script>
+        let um = document.getElementById('1').value
+        let dois = document.getElementById('2')
+        let tres = document.getElementById('3')
+        let mais = document.getElementById('+')
+        let quatro = document.getElementById('4')
+        let cinco = document.getElementById('5')
+        let seis = document.getElementById('6')
+        let menos = document.getElementById('menos')
+        let sete = document.getElementById('7')
+        let oito = document.getElementById('8')
+        let nove = document.getElementById('9')
+        let igual = document.getElementById('=')
+        let zero = document.getElementById('0')
+        let resultado = document.getElementById('resultado')
+
+        um.addEventListener('click', clicar1)
+        dois.addEventListener('click', clicar2)
+        tres.addEventListener('click', clicar3)
+        mais.addEventListener('click', clicarmais)
+        quatro.addEventListener('click', clicarquatro)
+        cinco.addEventListener('click', clicarcinco)
+        seis.addEventListener('click', clicarseis)
+        menos.addEventListener('click', clicarmenos)
+        sete.addEventListener('click', clicarsete)
+        oito.addEventListener('click', clicaroito)
+        nove.addEventListener('click', clicarnove)
+        igual.addEventListener('click', clicarigual)
+        zero.addEventListener('click', clicarzero)
+
+        function clicar1(){
+            document.getElementById('resultado').textContent = um.value;
+        }
+    </script>
+</body>
+</html>
